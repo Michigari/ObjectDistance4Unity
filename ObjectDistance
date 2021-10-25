@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ObjectDistance : MonoBehaviour
+{
+    public GameObject cubeA;
+    public GameObject cubeB;
+    public Text TextFrame;
+    float dis;
+    int oppai;
+
+    void Start()
+    {
+        
+    }
+    void Update()
+   // while()
+    {
+        Vector3 posA = cubeA.transform.position;
+        Vector3 posB = cubeB.transform.position;
+        dis = Vector3.Distance(posA, posB);
+        Debug.Log("Sukumiz Distance : " + dis +"m");
+        TextFrame.text = "Distance:"+(dis.ToString("G3")+'m');
+        //Debug.Log(oppai);)
+        //oppai++;
+        //Invoke("DelayMethod", 3.5f);
+    }
+}
+//Michigari
