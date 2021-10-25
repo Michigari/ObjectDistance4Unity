@@ -4,28 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ObjectDistance : MonoBehaviour
-{
-    public GameObject cubeA;
-    public GameObject cubeB;
-    public Text TextFrame;
-    float dis;
-    int oppai;
+{   // 変数宣言
+    public GameObject cubeA; //始点キューブ cubeA
+    public GameObject cubeB; //終点キューブ cubeB
+    public Text TextFrame; //描画用の文字列
+    float dis; //距離
+    int oppai; //使ってない変数はconsoleに警告が出る
 
-    void Start()
+    void Start() //最初に走るコード
     {
         
     }
-    void Update()
-   // while()
+    void Update() //fpsごとに更新する
     {
-        Vector3 posA = cubeA.transform.position;
-        Vector3 posB = cubeB.transform.position;
-        dis = Vector3.Distance(posA, posB);
-        Debug.Log("Sukumiz Distance : " + dis +"m");
-        TextFrame.text = "Distance:"+(dis.ToString("G3")+'m');
+        Vector3 posA = cubeA.transform.position; //cubeAのXYZをposAに代入
+        Vector3 posB = cubeB.transform.position; //cubeBのXYZをposBに代入
+        dis = Vector3.Distance(posA, posB); //cubeAとcubeBの距離をdisに代入
+        Debug.Log("Sukumiz Distance : " + dis +"m"); //consoleにdisを出力
+        TextFrame.text = "Distance:"+(dis.ToString("G3")+'m'); //UIにdisを代入して描画
         //Debug.Log(oppai);)
         //oppai++;
-        //Invoke("DelayMethod", 3.5f);
     }
 }
 //Michigari
